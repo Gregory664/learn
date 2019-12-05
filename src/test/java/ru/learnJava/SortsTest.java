@@ -30,6 +30,7 @@ public class SortsTest {
 
     @Test
     public void insertSort() {
-
+        Sorts.insertSort(array);
+        assertArrayEquals(array, sortedArray);
     }
 }
