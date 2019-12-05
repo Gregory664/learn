@@ -24,9 +24,12 @@ public class SortsTest {
 
     @Test
     public void selectSort() {
+        Sorts.selectSort(array);
+        assertArrayEquals(array, sortedArray);
     }
 
     @Test
     public void insertSort() {
+
     }
 }
