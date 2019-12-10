@@ -123,4 +123,45 @@ public class Tasks {
         Double result = Math.pow(2 * A / Math.PI, 2);
         return new BigDecimal(result).setScale(2, RoundingMode.DOWN).doubleValue();
     }
+
+    public static String[] stringToArray(String s) {
+        return s.split(" ");
+    }
+
+    public static int[] take(int[] arr, int n) {
+        return n > arr.length ? Arrays.copyOfRange(arr, 0, arr.length) : Arrays.copyOfRange(arr, 0, n);
+    }
+
+    public static String describeAge(int age) {
+        return "You're a(n) " + (age <= 12 ? "kid" : age <= 17 ? "teenager" : age <= 64 ? "adult" : "elderly");
+    }
+
+    public static String howManyDalmatians(int number) {
+        return number <= 10 ? "Hardly any" :
+               number <= 50 ? "More than a handful!" :
+               number == 101 ? "101 DALMATIANS!!!" : "Woah that's a lot of dogs!";
+    }
+
+    public static String integrate(int coefficient, int exponent) {
+        return (coefficient /= ++exponent) + "x^" + exponent;
+    }
+
+    public static String remove(String str) {
+        return str.substring(1, str.length() - 1);
+    }
+
+    public static String[] fixTheMeerkat(String[] arr) {
+        return null;
+    }
+
+    public static void matrix(int size) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                System.out.print(i * j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }

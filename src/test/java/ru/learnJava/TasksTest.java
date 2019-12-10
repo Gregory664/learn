@@ -101,4 +101,52 @@ public class TasksTest {
         assertEquals(0, Tasks.squareArea(0),DELTA);
         assertEquals(80, Tasks.squareArea(14.05),DELTA);
     }
+
+    @Test
+    public void stringToArray() {
+        assertArrayEquals(new String[]{"Robin", "Singh"}, Tasks.stringToArray("Robin Singh"));
+    }
+
+    @Test
+    public void take() {
+        assertArrayEquals(new int[] {1, 2, 3}, Tasks.take(new int[] {1, 2, 3, 4, 5, 6}, 3));
+        assertArrayEquals(new int[] {1, 2}, Tasks.take(new int[] {1, 2, 3, 4, 5, 6}, 2));
+        assertArrayEquals(new int[] {1, 2, 3}, Tasks.take(new int[] {1, 2, 3}, 4));
+        assertArrayEquals(new int[] { }, Tasks.take(new int[] { }, 0));
+        assertArrayEquals(new int[] { }, Tasks.take(new int[] { }, 3));
+    }
+
+    @Test
+    public void howManyDalmatians() {
+        assertEquals("More than a handful!",Tasks.howManyDalmatians(26));
+        assertEquals("Hardly any" ,Tasks.howManyDalmatians(8));
+        assertEquals("More than a handful!" ,Tasks.howManyDalmatians(14));
+        assertEquals("Woah that's a lot of dogs!" ,Tasks.howManyDalmatians(80));
+        assertEquals("Woah that's a lot of dogs!" ,Tasks.howManyDalmatians(100));
+        assertEquals("101 DALMATIANS!!!" ,Tasks.howManyDalmatians(101));
+    }
+
+    @Test
+    public void integrate() {
+        assertEquals("1x^3", Tasks.integrate(3,2));
+        assertEquals("2x^6", Tasks.integrate(12,5));
+        assertEquals("10x^2", Tasks.integrate(20,1));
+        assertEquals("10x^4", Tasks.integrate(40,3));
+        assertEquals("30x^3", Tasks.integrate(90,2));
+    }
+
+    @Test
+    public void remove() {
+        assertEquals("loquen", Tasks.remove("eloquent"));
+        assertEquals("ountr", Tasks.remove("country"));
+        assertEquals("erso", Tasks.remove("person"));
+        assertEquals("lac", Tasks.remove("place"));
+    }
+
+    @Test
+    public void fixTheMeerkat() {
+        assertArrayEquals(new String[]{ "head", "body", "tail" }, Tasks.fixTheMeerkat(new String[]{ "tail", "body", "head" }));
+    }
+
+
 }

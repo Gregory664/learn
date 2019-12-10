@@ -1,26 +1,26 @@
 package ru.learnJava.structure;
 
 public class MyStack {
-    private int[] array;
+    private char[] array;
     private int arraySize;
     private int position;
 
     public MyStack(int size) {
         arraySize = size;
-        array = new int[arraySize];
+        array = new char[arraySize];
         position = -1;
     }
 
-    public void push(int number) {
+    public void push(char number) {
         if(!isFull()) {
             array[++position] = number;
         } else System.out.println("Stack is full");
     }
 
-    public int pop() {
+    public char pop() {
         if(!isEmpty()) {
             return array[position--];
-        } else return -1001;
+        } else return ' ';
     }
 
     public int peek() {
