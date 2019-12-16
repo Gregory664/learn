@@ -27,11 +27,29 @@ public class MyStack {
         return array[position];
     }
 
+    public char peekN(int n) {
+        return array[n];
+    }
+
+    public int size() {
+        return position + 1;
+    }
+
     public boolean isEmpty() {
         return position == -1;
     }
 
     public boolean isFull() {
         return position == arraySize - 1;
+    }
+
+    public void display(String s) {
+        System.out.print(s);
+        System.out.println("Stack (bottom-->top): ");
+        for (int i = 0; i < size(); i++) {
+            System.out.print(peekN(i));
+            System.out.print(" ");
+        }
+        System.out.println();
     }
 }
